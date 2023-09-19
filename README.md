@@ -1,5 +1,5 @@
 ---
-title: Solara Template
+title: Geospatial Data Visualization
 emoji: 🏃
 colorFrom: blue
 colorTo: green

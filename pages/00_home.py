@@ -5,15 +5,13 @@ import solara
 def Page():
     with solara.Column(align="center"):
         markdown = """
-        ## A Solara Template for Geospatial Applications
+        ## An interactive web app for visualizing geospatial data
         
         ### Introduction
 
-        **A collection of [Solara](https://github.com/widgetti/solara) web apps for geospatial applications.**
-
-        - Web App: <https://giswqs-solara-template.hf.space>
-        - GitHub: <https://github.com/opengeos/solara-template>
-        - Hugging Face: <https://huggingface.co/spaces/giswqs/solara-template>
+        - Web App: <https://giswqs-geospatial-dataviz.hf.space>
+        - GitHub: <https://github.com/opengeos/geospatial-dataviz>
+        - Hugging Face: <https://huggingface.co/spaces/giswqs/geospatial-dataviz>
 
         """
 
