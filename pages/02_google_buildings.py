@@ -65,6 +65,8 @@ def add_widget(m, position="topright"):
 
     m.add_widget(country, position=position)
 
+    html = "Source: <a href='https://sites.research.google/open-buildings/' target='_blank'>Google Open Buildings</a>"
+    m.add_html(html, position='bottomright')
 
 class Map(leafmap.Map):
     def __init__(self, **kwargs):

@@ -9,4 +9,10 @@ license: mit
 app_port: 8765
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+# An interactive web app for visualizing geospatial data
+
+## Introduction
+
+- Web App: <https://giswqs-geospatial-dataviz.hf.space>
+- GitHub: <https://github.com/opengeos/geospatial-dataviz>
+- Hugging Face: <https://huggingface.co/spaces/giswqs/geospatial-dataviz>
