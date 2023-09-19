@@ -34,7 +34,8 @@ def add_widget(m, position="topright"):
     def dataset_changed(change):
         if change["new"]:
             selected = change["new"]
-            m.add_ee_layer(selected)
+            if selected not in m.get_layer_names():
+                m.add_ee_layer(selected)
 
     dataset.observe(dataset_changed, names="value")
 
