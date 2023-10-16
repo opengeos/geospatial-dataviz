@@ -8,6 +8,7 @@ RUN mamba install -c conda-forge nodejs geopandas localtileserver -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
+RUN pip install wheel
 RUN pip install -U git+https://github.com/giswqs/ipyleaflet.git@pmtiles
 RUN pip install -U git+https://github.com/opengeos/leafmap.git
 
