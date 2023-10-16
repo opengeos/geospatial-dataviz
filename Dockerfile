@@ -1,6 +1,6 @@
 FROM jupyter/base-notebook:latest
 
-RUN mamba install -c conda-forge leafmap geopandas localtileserver -y && \
+RUN mamba install -c conda-forge geopandas localtileserver -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
