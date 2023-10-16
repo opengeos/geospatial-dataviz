@@ -4,7 +4,7 @@ USER root
 RUN apt-get update && apt-get install -y git
 USER ${NB_USER}
 
-RUN mamba install -c conda-forge geopandas localtileserver -y && \
+RUN mamba install -c conda-forge nodejs geopandas localtileserver -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
