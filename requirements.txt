@@ -1,3 +1,4 @@
+leafmap
 solara
 geopandas
 pydantic< 2.0 
