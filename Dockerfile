@@ -16,6 +16,7 @@ USER root
 RUN chown -R ${NB_UID} ${HOME}
 RUN apt-get update && apt-get install -y git
 RUN pip install -U git+https://github.com/giswqs/ipyleaflet.git@pmtiles
+RUN pip install -U git+https://github.com/opengeos/leafmap.git
 USER ${NB_USER}
 
 EXPOSE 8765
