@@ -1,5 +1,6 @@
 import leafmap
 import solara
+import ipyleaflet
 
 
 zoom = solara.reactive(2)
@@ -15,14 +16,6 @@ class Map(leafmap.Map):
         url = "https://storage.googleapis.com/ahp-research/overture/pmtiles/overture.pmtiles"
 
         style={
-            "version": 8,
-            "sources": {
-                "example_source": {
-                    "type": "vector",
-                    "url": "pmtiles://" + url,
-                    "attribution": 'PMTiles',
-                }
-            },
             "layers": [
                 {
                     "id": "admins",
@@ -55,7 +48,9 @@ class Map(leafmap.Map):
             ],
         }
 
-        self.add_pmtiles(url, name='PMTiles', style=style)
+        layer = ipyleaflet.PMTilesLayer(url=url, style=style)
+        self.add(layer)
+        # self.add_pmtiles(url, name='PMTiles', style=style)
 
         legend_dict = {
             'admins': 'BDD3C7',
