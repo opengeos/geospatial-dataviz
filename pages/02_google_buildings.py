@@ -9,14 +9,14 @@ center = solara.reactive((20, 0))
 
 
 def get_datasets(m):
-    url = 'https://raw.githubusercontent.com/opengeos/ee-tile-layers/main/datasets.tsv'
-    df = pd.read_csv(url, sep='\t')
-    setattr(m, 'df', df)
+    url = "https://raw.githubusercontent.com/opengeos/ee-tile-layers/main/datasets.tsv"
+    df = pd.read_csv(url, sep="\t")
+    setattr(m, "df", df)
     return df
 
 
 def add_widget(m, position="topright"):
-    building_url = "https://sites.research.google/open-buildings/tiles.geojson"
+    building_url = "https://openbuildings-public-dot-gweb-research.uw.r.appspot.com/public/tiles.geojson"
     country_url = (
         "https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip"
     )
@@ -61,12 +61,13 @@ def add_widget(m, position="topright"):
 
     country.observe(country_changed, names="value")
 
-    m.add_ee_layer('GOOGLE/open-buildings', name='Buildings')
+    m.add_ee_layer("GOOGLE/open-buildings", name="Buildings")
 
     m.add_widget(country, position=position)
 
     html = "Source: <a href='https://sites.research.google/open-buildings/' target='_blank'>Google Open Buildings</a>"
-    m.add_html(html, position='bottomright')
+    m.add_html(html, position="bottomright")
+
 
 class Map(leafmap.Map):
     def __init__(self, **kwargs):
